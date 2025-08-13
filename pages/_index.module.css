@@ -1,0 +1,188 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-6);
+  padding: var(--spacing-4);
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.headerTitle h1 {
+  margin: 0;
+  font-size: inherit;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.monthDisplay {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--foreground);
+  min-width: 9rem;
+  text-align: center;
+}
+
+.importExportSection {
+  margin-bottom: var(--spacing-6);
+}
+
+.calendarContainer {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+  box-shadow: var(--shadow-md);
+}
+
+.calendarGrid {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: var(--spacing-1);
+  table-layout: fixed;
+}
+
+.calendarGrid th {
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  padding-bottom: var(--spacing-2);
+}
+
+.dayCell {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color var(--animation-duration-fast) ease, border-color var(--animation-duration-fast) ease;
+  padding: var(--spacing-1);
+}
+
+.dayCell:hover {
+  background-color: var(--muted);
+}
+
+.today .dayCell {
+  border-color: var(--primary);
+}
+
+.dayNumber {
+  font-size: 0.9rem;
+  color: var(--foreground);
+}
+
+.outsideDay .dayNumber {
+  color: var(--muted-foreground);
+  opacity: 0.7;
+}
+
+.entryIndicator {
+  position: absolute;
+  bottom: var(--spacing-1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.dayDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.multipleDot {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.entryCount {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--foreground);
+  line-height: 1;
+  background-color: var(--background);
+  border-radius: var(--radius-sm);
+  padding: 1px 3px;
+  min-width: 12px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.multipleEntries {
+  background-color: color-mix(in srgb, var(--primary) 5%, transparent);
+}
+
+.multipleEntries:hover {
+  background-color: color-mix(in srgb, var(--primary) 10%, var(--muted));
+}
+
+.error {
+  color: var(--error);
+  text-align: center;
+  padding: var(--spacing-8);
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-6);
+  margin-top: var(--spacing-4);
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Skeleton Styles */
+.skeletonHeader {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: var(--spacing-2);
+}
+
+.skeletonBody {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--spacing-1);
+}
+
+.skeletonCell {
+  aspect-ratio: 1 / 1;
+  height: auto;
+}
