@@ -1,0 +1,173 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Fira+Code:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Caveat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+
+
+
+:root {
+  /* Content layers */
+  --z-content-low: 10; /* Minor elevated content */
+  --z-content: 20; /* Standard elevated content */
+  --z-content-high: 30; /* Important content that needs prominence */
+
+  /* Navigation layers */
+  --z-nav-low: 100; /* Secondary navigation components */
+  --z-nav: 200; /* Primary navigation bars */
+  --z-nav-sticky: 300; /* Sticky navigation elements */
+
+  /* Overlay layers */
+  --z-overlay: 400;
+
+  --z-spotlight: 1000; /* Tutorial spotlights/guided help */
+
+  /* System layers */
+  --z-critical: 2000; /* Critical system notifications */
+
+  /* spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+}
+
+:root {
+  /* Light Mode */
+  --background: hsl(210 20% 98%);
+  --foreground: hsl(210 10% 23%);
+
+  --surface: hsl(0 0% 100%);
+  --surface-foreground: hsl(210 10% 23%);
+  --sidebar: hsl(210 20% 96%);
+  --sidebar-foreground: hsl(210 10% 23%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(210 10% 23%);
+  --popup: hsl(0 0% 100%);
+  --popup-foreground: hsl(210 10% 23%);
+
+  --primary: hsl(180 40% 40%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(20 50% 60%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --accent: hsl(180 40% 50%);
+  --accent-foreground: hsl(0 0% 100%);
+
+  --muted: hsl(210 20% 94%);
+  --muted-foreground: hsl(210 10% 45%);
+
+  --success: hsl(140 50% 50%);
+  --success-foreground: hsl(0 0% 100%);
+  --error: hsl(0 70% 60%);
+  --error-foreground: hsl(0 0% 100%);
+  --warning: hsl(45 80% 60%);
+  --warning-foreground: hsl(45 100% 10%);
+  --info: hsl(200 70% 55%);
+  --info-foreground: hsl(0 0% 100%);
+  --info-hover: hsl(200 70% 65%);
+  --info-active: hsl(200 70% 45%);
+
+  --border: hsl(210 20% 88%);
+
+  /* Font Families */
+  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-heading: "Poppins", sans-serif;
+  --font-family-monospace: "Fira Code", "Courier New", monospace;
+  --font-family-cursive: "Caveat", cursive;
+
+  /* Border Radius and box shadows */
+  --shadow: 0 1px 2px 0 hsl(210 20% 50% / 0.05);
+  --shadow-md: 0 4px 6px -1px hsl(210 20% 50% / 0.1), 0 2px 4px -2px hsl(210 20% 50% / 0.1);
+  --shadow-lg: 0 10px 15px -3px hsl(210 20% 50% / 0.1), 0 4px 6px -4px hsl(210 20% 50% / 0.1);
+  --shadow-focus: 0 0 0 2px var(--background), 0 0 0 4px var(--primary);
+
+  --radius-sm: 0.25rem; /* 4px */
+  --radius: 0.5rem; /* 8px */
+  --radius-md: 0.75rem; /* 12px */
+  --radius-lg: 1rem; /* 16px */
+  --radius-full: 9999px;
+
+  /* Animation */
+  --animation-duration-fast: 150ms;
+  --animation-duration-normal: 300ms;
+  --animation-duration-slow: 500ms;
+
+  /* Chart colors */
+  --chart-color-1: hsl(205 65% 55%);
+  --chart-color-2: hsl(165 55% 55%);
+  --chart-color-3: hsl(35 75% 60%);
+  --chart-color-4: hsl(345 65% 65%);
+  --chart-color-5: hsl(250 60% 70%);
+
+  /* Bristol Scale Colors */
+  --bristol-0: hsl(210 15% 75%); /* No Activity - Gray */
+  --bristol-1: hsl(0 45% 50%);   /* Severe Constipation - Dark Red */
+  --bristol-2: hsl(0 40% 60%);   /* Mild Constipation - Medium Red */
+  --bristol-3: hsl(0 35% 70%);   /* Light Constipation - Light Red */
+  --bristol-4: hsl(120 40% 50%); /* Ideal - Green */
+  --bristol-5: hsl(120 35% 60%); /* Normal - Light Green */
+  --bristol-6: hsl(45 60% 55%);  /* Loose - Yellow/Orange */
+  --bristol-7: hsl(30 65% 60%);  /* Watery - Orange */
+}
+
+.dark {
+  --background: hsl(220 18% 11%);
+  --foreground: hsl(210 20% 95%);
+
+  --surface: hsl(220 18% 15%);
+  --surface-foreground: hsl(210 20% 95%);
+  --sidebar: hsl(220 18% 13%);
+  --sidebar-foreground: hsl(210 20% 95%);
+  --card: hsl(220 18% 15%);
+  --card-foreground: hsl(210 20% 95%);
+  --popup: hsl(220 18% 15%);
+  --popup-foreground: hsl(210 20% 95%);
+
+  --primary: hsl(180 40% 50%);
+  --primary-foreground: hsl(180 100% 10%);
+  --secondary: hsl(20 50% 65%);
+  --secondary-foreground: hsl(20 100% 10%);
+  --accent: hsl(180 40% 60%);
+  --accent-foreground: hsl(180 100% 10%);
+
+  --muted: hsl(220 18% 20%);
+  --muted-foreground: hsl(210 15% 65%);
+
+  --success: hsl(140 50% 55%);
+  --success-foreground: hsl(140 100% 10%);
+  --error: hsl(0 70% 65%);
+  --error-foreground: hsl(0 100% 10%);
+  --warning: hsl(45 80% 65%);
+  --warning-foreground: hsl(45 100% 10%);
+  --info: hsl(200 70% 60%);
+  --info-foreground: hsl(200 100% 10%);
+  --info-hover: hsl(200 70% 70%);
+  --info-active: hsl(200 70% 50%);
+
+  --border: hsl(220 18% 25%);
+
+  /* Border Radius and box shadows */
+  --shadow: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+  --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
+  --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -4px hsl(0 0% 0% / 0.1);
+  --shadow-focus: 0 0 0 2px var(--background), 0 0 0 4px var(--primary);
+
+  /* Chart colors */
+  --chart-color-1: hsl(205 65% 60%);
+  --chart-color-2: hsl(165 55% 60%);
+  --chart-color-3: hsl(35 75% 65%);
+  --chart-color-4: hsl(345 65% 70%);
+  --chart-color-5: hsl(250 60% 75%);
+
+  /* Bristol Scale Colors */
+  --bristol-0: hsl(210 15% 50%); /* No Activity - Gray */
+  --bristol-1: hsl(0 45% 55%);   /* Severe Constipation - Dark Red */
+  --bristol-2: hsl(0 40% 65%);   /* Mild Constipation - Medium Red */
+  --bristol-3: hsl(0 35% 75%);   /* Light Constipation - Light Red */
+  --bristol-4: hsl(120 40% 55%); /* Ideal - Green */
+  --bristol-5: hsl(120 35% 65%); /* Normal - Light Green */
+  --bristol-6: hsl(45 60% 60%);  /* Loose - Yellow/Orange */
+  --bristol-7: hsl(30 65% 65%);  /* Watery - Orange */
+}
